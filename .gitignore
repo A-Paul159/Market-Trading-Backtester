@@ -1,15 +1,46 @@
 # Frontend
 Frontend/node_modules/
 Frontend/dist/
+Frontend/.vite/
 
 # Backend
 Backend/target/
 
-# Environment files
+# Local backend config
+Backend/src/main/resources/application.properties
+Backend/src/main/resources/application-local.properties
+Backend/src/main/resources/application-dev.properties
+Backend/src/main/resources/application-prod.properties
+
+# Keep safe example configs
+!Backend/src/main/resources/application-example.properties
+
+# Environment files / secrets
 .env
+.env.*
 *.env
 Backend/.env
+Backend/.env.*
 Frontend/.env
+Frontend/.env.*
+
+# API keys / credentials
+*.key
+*.pem
+*.p12
+*.jks
+*.crt
+*.cer
+credentials.json
+secrets.json
+service-account.json
+
+# Database / local data
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.backup
 
 # Mac
 .DS_Store
@@ -17,9 +48,22 @@ Frontend/.env
 # Editor
 .vscode/
 .idea/
+*.iml
 
 # Logs
 *.log
+logs/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+
+# Test / coverage
+coverage/
+Frontend/coverage/
+Backend/coverage/
+
+# Temp/cache
+.cache/
+.tmp/
+temp/
