@@ -1,0 +1,14 @@
+CREATE TABLE candles (
+    id BIGSERIAL PRIMARY KEY,
+    symbol VARCHAR(30) NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
+    open DOUBLE PRECISION NOT NULL,
+    high DOUBLE PRECISION NOT NULL,
+    low DOUBLE PRECISION NOT NULL,
+    close DOUBLE PRECISION NOT NULL,
+    volume BIGINT NOT NULL,
+    source VARCHAR(30) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT unique_symbol_timestamp UNIQUE (symbol, timestamp)
+);
